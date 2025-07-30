@@ -1,5 +1,9 @@
 {
   "cSpell.words": [
+    "Autoloaded",
+    "encrypter",
+    "enderror",
+    "endsection",
     "fastcgi",
     "FRIMA",
     "Laravel",
@@ -9,6 +13,7 @@
     "mylist",
     "mysqld",
     "phar",
-    "phpmyadmin"
+    "phpmyadmin",
+    "tabindex"
   ]
 }
