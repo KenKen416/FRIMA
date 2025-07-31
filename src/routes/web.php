@@ -54,5 +54,15 @@ Route::get('/item/{item_id}', function () {
 })->name('items.show');
 
 Route::get('/purchase/{item_id}', function () {
-    return view('purchases.index');
+    $item = (object) [
+        'id' => 1,
+        'name' => 'オレンジ３個',
+        'image' => 'orange.png',
+        'description' => '美味しいオレンジです.',
+        'price' => 1000,
+        'brand_name' => 'オレンジ農園',
+        'item_condition' => '新品',
+        'categories' => ['食べ物', '果物', '食べ物', '果物', '食べ物', '果物', '食べ物', '果物'],
+    ];
+    return view('purchases.index', compact('item'));
 })->name('purchases.index');

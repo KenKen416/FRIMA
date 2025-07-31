@@ -35,11 +35,11 @@
         <label>カテゴリー</label>
         <div class="category-group">
           <input type="checkbox"
-          name="category_id[]"
-          id="category_id_変数"
-          value="変数"
-          class="category-checkbox"
-          {{ in_array('変数', old('category_id', [])) ? 'checked' : '' }}>
+            name="category_id[]"
+            id="category_id_変数"
+            value="変数"
+            class="category-checkbox"
+            {{ in_array('変数', old('category_id', [])) ? 'checked' : '' }}>
           <label for="category_id_変数" class="category-label">おもちゃ</label>
           <!-- 変数で入れるのは後でやります １のところとか忘れずに-->
           <!-- ダミー -->
@@ -84,20 +84,20 @@
         @enderror
       </div>
       <div class="form-group">
-        <label for="item_condition">商品の状態</label>
-        <select name="item_condition" id="item_condition" class="input">
+        <label for="condition_id">商品の状態</label>
+        <select name="condition_id" id="condition_id" class="input">
           <option value="">選択してください</option>
-          <option value="新品"
-            {{old('item_condition') == "新品" ? 'checked' : ''}}>新品</option>
-          <option value="目立った傷や汚れなし" {{old('item_condition') == "目立った傷や汚れなし" ? 'checked' : ''}}>目立った傷や汚れなし</option>
-          <option value="やや傷や汚れあり"
-            {{old('item_condition') == "やや傷や汚れあり" ? 'checked' : ''}}>やや傷や汚れあり</option>
-          <option value="傷や汚れあり"
-            {{old('item_condition') == "傷や汚れあり" ? 'checked' : ''}}>傷や汚れあり</option>
-          <option value="全体的に状態が悪い"
-            {{old('item_condition') == "全体的に状態が悪い" ? 'checked' : ''}}>全体的に状態が悪い</option>
+          <option value="1"
+            {{old('condition_id') == "1" ? 'checked' : ''}}>新品</option>
+          <option value="2" {{old('condition_id') == "2" ? 'checked' : ''}}>目立った傷や汚れなし</option>
+          <option value="3"
+            {{old('condition_id') == "3" ? 'checked' : ''}}>やや傷や汚れあり</option>
+          <option value="4"
+            {{old('condition_id') == "4" ? 'checked' : ''}}>傷や汚れあり</option>
+          <option value="5"
+            {{old('condition_id') == "5" ? 'checked' : ''}}>全体的に状態が悪い</option>
         </select>
-        @error('item_condition')
+        @error('condition_id')
         <span class="error-message">{{ $message }}</span>
         @enderror
 
